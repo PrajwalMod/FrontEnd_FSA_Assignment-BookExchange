@@ -1,0 +1,108 @@
+.background-image {
+    /* Full screen setup */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Background image setup */
+    background: url('../assets/asset_bg.jpg') no-repeat center center;
+    background-size: cover;
+  
+    /* Use flexbox to center children both horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* Ensure the container does not overlay content */
+    z-index: 1;
+  }
+  
+  
+  .content-container {
+    color: black;
+    /* Make sure dimensions are suitable for your content */
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+  
+    /* Adjust background color for contrast and a bit of transparency */
+    background-color: rgba(255, 255, 255, 0.9);
+  
+    /* Centering within the .background-image container */
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    /* Other styles for aesthetics */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    
+    /* Ensure the content is on top of the background image */
+    z-index: 10;
+  
+    /* Align text to center within the container */
+    text-align: center;
+  }
+  
+  
+  
+  .button {
+    display: inline-block;
+    padding: 8px 16px; /* Adjust padding to your preference */
+    margin: 0 4px; /* Provides at least 4px space between buttons */
+    background-color: #007bff; /* A shade of blue */
+    color: white; /* Text color */
+    text-align: center;
+    text-decoration: none; /* Remove underline from links */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Optional: rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    margin-bottom: 16px;
+  }
+  
+  .button:hover, .button:focus {
+    background-color: #0056b3; /* Darker blue on hover/focus */
+    outline: none; /* Remove outline on focus for aesthetic purposes */
+  }
+  
+
+  .form-group {
+    margin-bottom: 16px; /* Add some space between the form fields */
+  }
+  
+  /* Style the input fields to match the overall design */
+  input[type="email"],
+  input[type="password"] {
+    width: 100%; /* Make input fields take up the full width of the form-group */
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ddd; /* Light border for the inputs */
+    border-radius: 4px;
+  }
+
+  .form-input {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Comfortable padding for typing */
+    margin-top: 4px; /* Space below the label */
+    margin-bottom: 16px; /* Space below the input */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 4px; /* Match the border radius with buttons */
+    box-sizing: border-box; /* Include padding and border in the input width */
+  }
+  
+  
+  .form-actions {
+    text-align: center; /* Center-align the form actions, if needed */
+  }
+  
+  /* You may want to style the labels and inputs further to match your design */
+  
+  .error {
+    color: #ff0000; /* Or any color you wish for error messages */
+    margin-top: 4px; /* Space between the input and error message */
+  }
+  
